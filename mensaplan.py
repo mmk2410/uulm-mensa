@@ -9,6 +9,11 @@ import json
 import datetime
 
 def get():
+    """
+    Recieving the JSON file from uulm
+
+    return json data
+    """
     url = "http://www.uni-ulm.de/mensaplan/data/mensaplan.json"
     response = urllib.request.urlopen(url)
     data = response.read()
@@ -16,10 +21,10 @@ def get():
     data = json.loads(data)
     return data
 
-def print_mensa():
-    print("Mensaplan")
-
 def print_usage():
+    """
+    Print the help text
+    """
     print("Usage:")
     usage = """
     ./mensaplan.py print
@@ -35,7 +40,7 @@ if len(sys.argv) >= 2:
     cmd = sys.argv[1]
     if cmd == "print":
         plan = get()
-        print_mensa()
+        print("Mensplan:")
         day = datetime.datetime.today().weekday()
         if len(sys.argv) == 3:
             if sys.argv[2] == "mon":
@@ -52,7 +57,7 @@ if len(sys.argv) >= 2:
                 day = 5
         if day > 4:
             print("Heute gibt es nichts zu essen. Bloed gelaufen :(")
-            exit(5);
+            exit(5)
         for meal in plan["weeks"][1]["days"][day]["Mensa"]["meals"]:
             print(meal["category"] + ": " + meal["meal"])
     else:

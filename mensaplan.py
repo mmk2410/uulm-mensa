@@ -27,20 +27,34 @@ def print_usage():
     """
     print("Usage:")
     usage = """
-    ./mensaplan.py print
-    Um das heutige Menue auszugeben.
+    ./mensaplan.py
+    Print the todays menu.
 
     ./mensaplan.py print [mon, thu, wed, thur, fri]
-    Um das Menue des jeweiligen Tasges auszugeben.
+    Print the menu of the given weekday.
     """
     print(usage)
     print("mmk2410 (c) 2015 MIT License")
 
 if len(sys.argv) >= 2:
     cmd = sys.argv[1]
-    if cmd == "print":
+    if cmd == "help":
+        print_usage()
+    else:
+        if cmd == "mensa":
+            place = "Mensa"
+        elif cmd == "bistro":
+            place = "Bistro"
+        elif cmd == "cafeteriab":
+            place = "CB"
+        elif cmd == "west":
+            place = "West"
+        elif cmd == "hochschule":
+            place = "Prittwitzstr"
+        else:
+            print("You have to give a place as a agrument")
         plan = get()
-        print("Mensplan:")
+        print("Menu:")
         day = datetime.datetime.today().weekday()
         if len(sys.argv) == 3:
             if sys.argv[2] == "mon":
@@ -56,11 +70,9 @@ if len(sys.argv) >= 2:
             else:
                 day = 5
         if day > 4:
-            print("Heute gibt es nichts zu essen. Bloed gelaufen :(")
+            print("There is no information about the menu today.")
             exit(5)
-        for meal in plan["weeks"][1]["days"][day]["Mensa"]["meals"]:
+        for meal in plan["weeks"][1]["days"][day][place]["meals"]:
             print(meal["category"] + ": " + meal["meal"])
-    else:
-        print_usage()
 else:
     print_usage()

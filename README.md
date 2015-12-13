@@ -1,6 +1,7 @@
 #Mensplan
 
 A python script for viewing the menu of the canteens of the Studierendenwerk Ulm in Ulm. The supported canteens are:
+
  - Mensa University
  - CafeteriaB
  - Southside Burgerbar

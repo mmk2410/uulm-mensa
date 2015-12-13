@@ -30,7 +30,7 @@ Mensa Hochschule:    hochschule
 ```
 
 ## Credits
-Thanks a lot at [https://github.com/seder](Thomas Lukaseder) and his [https://github.com/seder/mensaplan-parser](Mensaplan Parser) as well as the Studierendenwerk Ulm for providing the data.
+Thanks a lot at (https://github.com/seder)[Thomas Lukaseder] and his (https://github.com/seder/mensaplan-parser)[Mensaplan Parser] as well as the Studierendenwerk Ulm for providing the data.
 
 ## License
 

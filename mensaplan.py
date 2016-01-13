@@ -71,17 +71,17 @@ def print_menu(place, static=False):
     place -- name of the cafeteria / mensa
     static -- set true if a static menu exists (default: False)
     """
+    day = get_day()
     if static:
         plan = get(FILES[1])
-        week = 0
+        for meal in plan["weeks"][0]["days"][day][place]["meals"]:
+            if place == "Diner":
+                print(meal["category"] + " " + meal["meal"])
+            else:
+                print(meal["category"] + ": " + meal["meal"])
     else:
         plan = get(FILES[0])
-        week = 1
-    day = get_day()
-    for meal in plan["weeks"][week]["days"][day][place]["meals"]:
-        if place == "Diner":
-            print(meal["category"] + " " + meal["meal"])
-        else:
+        for meal in plan["weeks"][0]["days"][day][place]["meals"]:
             print(meal["category"] + ": " + meal["meal"])
 
 def main():

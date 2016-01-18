@@ -20,7 +20,7 @@ def print_usage():
     ./mensaplan.py place
     Print the todays menu at the place.
 
-    ./mensaplan.py place [mon, thu, wed, thur, fri]
+    ./mensaplan.py place [mon, tue, wed, thur, fri]
     Print the menu at the place of the given weekday.
 
     Supported places are:
@@ -49,7 +49,7 @@ def get_day():
     if len(sys.argv) == 3:
         if sys.argv[2] == "mon":
             day = 0
-        elif sys.argv[2] == "thu":
+        elif sys.argv[2] == "tue":
             day = 1
         elif sys.argv[2] == "wed":
             day = 2

@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/usr/bin/env python3
 """
 Print the Mensaplan of the uni ulm in a fancy cli way
 """

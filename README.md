@@ -13,13 +13,18 @@ A python script for viewing the menu of the canteens of the Studierendenwerk Ulm
  - WestSideDiner
  - Mensa Hochschule
 
+## Installation
+```
+sudo pip3 install uulm-mensa
+```
+
 ##Usage
 After making the mensaplan.py executable with `chmod +x mensaplan.py` you have the following options:
 ```
-./mensaplan.py place
+uulm-mensa place
 Print the todays menu at the place.
 
-./mensaplan.py place [mon, thu, wed, thur, fri]
+uulm-mensa place [mon, thu, wed, thur, fri]
 Print the menu at the place of the given weekday.
 
 Supported places are:

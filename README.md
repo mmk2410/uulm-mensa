@@ -3,9 +3,6 @@
 release](https://img.shields.io/github/release/qubyte/rubidium.svg)]()
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
-[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)]()
-[![Twitter Follow](https://img.shields.io/twitter/follow/shields_io.svg?style=social)]()
-
 A python script for viewing the menu of the canteens of the Studierendenwerk Ulm in Ulm. The supported canteens are:
 
  - Mensa University

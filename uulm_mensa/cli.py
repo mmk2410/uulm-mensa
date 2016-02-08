@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
 """
-Print the Mensaplan of the uni ulm in a fancy cli way
+Print the Mensaplan of the university ulm in a fancy cli way
 """
 
 import sys
@@ -17,10 +16,10 @@ def print_usage():
     """Print the help text"""
     print("Usage:")
     usage = """
-    ./mensaplan.py place
+    uulm-mensa place
     Print the todays menu at the place.
 
-    ./mensaplan.py place [mon, tue, wed, thur, fri]
+    uulm-mensa place [mon, tue, wed, thur, fri]
     Print the menu at the place of the given weekday.
 
     Supported places are:
@@ -85,7 +84,7 @@ def print_menu(place, static=False):
             print(meal["category"] + ": " + meal["meal"])
 
 def main():
-    """Main function"""
+    """Entry point for the application script"""
     if len(sys.argv) >= 2:
         cmd = sys.argv[1]
         if cmd == "help":
@@ -112,4 +111,5 @@ def main():
         print("[ERROR]: No argument given")
         print_usage()
 
-main()
+if __name__ == "__main__":
+    main()

@@ -1,4 +1,4 @@
-#Mensaplan
+# Mensaplan
 [![GitHub
 release](https://img.shields.io/github/release/qubyte/rubidium.svg)]()
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
